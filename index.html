@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cafetería Sabor y Aroma</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo" id="logo">☕ Sabor y Aroma</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#compras">🛒 Compras (<span id="cart-count">0</span>)</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero-carousel">
+    <div class="hero-slide active">
+      <img src="imagenes/cafe1.jpeg" alt="Cafetería Sabor y Aroma 1">
+      <div class="hero-text">
+        <h1>Bienvenidos a Sabor y Aroma</h1>
+        <p>El mejor café artesanal con el toque perfecto de sabor y aroma.</p>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="imagenes/cafe2.jpeg" alt="Cafetería Sabor y Aroma 2">
+      <div class="hero-text">
+        <h1>Disfruta de cada taza</h1>
+        <p>Un lugar donde el aroma y la pasión se mezclan.</p>
+      </div>
+    </div>
+    <div class="hero-slide">
+      <img src="imagenes/cafe3.jpg" alt="Cafetería Sabor y Aroma 3">
+      <div class="hero-text">
+        <h1>El sabor que enamora</h1>
+        <p>Experiencias únicas en cada sorbo.</p>
+      </div>
+    </div>
+
+    <div class="hero-dots">
+      <span class="dot active"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </section>
+
+  <section id="nosotros" class="info">
+    <h2>Visión, Misión, Valores e Historia</h2>
+    <div class="info-content">
+      <div>
+        <h3>Visión</h3>
+        <p>Ser la cafetería preferida por los amantes del café, brindando experiencias únicas en cada taza.</p>
+      </div>
+      <div>
+        <h3>Misión</h3>
+        <p>Ofrecer productos de alta calidad con un servicio cálido que despierte los sentidos de nuestros clientes.</p>
+      </div>
+      <div>
+        <h3>Valores</h3>
+        <p>Calidad, Pasión, Respeto y Compromiso con la comunidad y el medio ambiente.</p>
+      </div>
+    </div>
+
+    <div class="historia">
+      <h3>Nuestra Historia</h3>
+      <p>
+        Sabor y Aroma nació con la pasión por el café artesanal y el deseo de crear un espacio acogedor para los verdaderos amantes del café.
+        Desde nuestros inicios, hemos trabajado con productores locales para ofrecer la mejor calidad en cada taza.
+      </p>
+    </div>
+
+    <div class="expertos">
+      <h3>Nuestros Expertos</h3>
+      <div class="expertos-grid">
+        <div class="experto">
+          <img src="imagenes/barista.jpg" alt="Juan Flores">
+          <h4>Juan Flores</h4>
+          <p>Barista</p>
+        </div>
+        <div class="experto">
+          <img src="imagenes/img 18.jpeg" alt="Carlos López">
+          <h4>Carlos López</h4>
+          <p>Tostador</p>
+        </div>
+        <div class="experto">
+          <img src="imagenes/especial en latte.jpeg" alt="Rafael Mendez">
+          <h4>Rafael Mendez</h4>
+          <p>Especialista en Latte Art</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu" class="carousel-section">
+    <h2>Nuestros Productos</h2>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="product-card">
+          <img src="imagenes/capuchino.jpeg" alt="Capuchino">
+          <h3>Capuchino</h3>
+          <p>Café espumoso con leche cremosa.</p>
+          <p>$3.00</p>
+          <button class="buy-btn" data-name="Capuchino" data-price="3">Comprar</button>
+        </div>
+        <div class="product-card">
+          <img src="imagenes/latte.jpeg" alt="Latte">
+          <h3>Latte</h3>
+          <p>Suave mezcla de café con leche vaporizada.</p>
+          <p>$3.50</p>
+          <button class="buy-btn" data-name="Latte" data-price="3.5">Comprar</button>
+        </div>
+        <div class="product-card">
+          <img src="imagenes/mocca.jpeg" alt="Mocca">
+          <h3>Mocca</h3>
+          <p>Café con un toque de chocolate.</p>
+          <p>$4.00</p>
+          <button class="buy-btn" data-name="Mocca" data-price="4">Comprar</button>
+        </div>
+        <div class="product-card">
+          <img src="imagenes/cold brew.jpeg" alt="Cold Brew">
+          <h3>Cold Brew</h3>
+          <p>Café frío de sabor intenso y refrescante.</p>
+          <p>$3.75</p>
+          <button class="buy-btn" data-name="Cold Brew" data-price="3.75">Comprar</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="compras" class="cart-section">
+    <h2>Carrito de Compras</h2>
+    <ul id="cart-list"></ul>
+    <p>Total: $<span id="cart-total">0.00</span></p>
+  </section>
+
+  <section id="contacto" class="contact">
+    <h2>Contáctanos</h2>
+    <form id="contact-form">
+      <input type="text" placeholder="Nombre" required>
+      <input type="email" placeholder="Correo electrónico" required>
+      <textarea placeholder="Mensaje" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Sabor y Aroma. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
